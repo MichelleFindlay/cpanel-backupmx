@@ -15,12 +15,31 @@
 # Change Log
 # https://raw.githubusercontent.com/MichaelFindlay/cpanel-backupmx/master/cpanel-backupmx.changelog.txt
 
-# Remove existing files for both mx backup hosts, along with temp file
-rm /etc/backupmxhosts
-rm mxbackup.txt
+# Entering your settings
+# You will need to enter the hostname of the site where you store the entitled domains in to the MASTER or MASTERSSL configuration settings.
+#
+# To enter the settings to enable exim mail server to handle backup domains you will need to enter this in to the crontab using the following entry -
+# Ensure Exim has correct config
+#
+# # Mail Cluster Configuration
+# 0 */5 * * * sh /root/cluster-client.sh > /dev/null 2>&1
+#
+# This will run every 5 minutes pulling a full list of your hosted / cPanel domains who are entitled to use the backup mail servers.
 
-# Downloads the new list of domains
-wget http://mailcluster.yourdomain.com/mxbackup.list
+# Sync Settings
+MASTER='mailcluster.yourdomain.com' # Enter the hostname of the webspace
+MASTERSSL='mailcluster.yourdomain.com' # Enter the SSL hostname of the webspace
+
+# DO NOT EDIT BELOW THIS LINE #
+
+FILENAME='mxackup.list' # Specifies the name of the collated file on the webspace
+
+# HTTP Fetch list of domains
+wget -O -N http://$MASTER/$FILENAME
+
+# HTTPS Fetch list of domains
+# To enable HTTPS for getting list of domains please comment out the HTTP section. And then uncomment the below line.
+#wget -O -N https://$MASTERSSL/$FILENAME
 
 # Relocates it to the mxbackup hosts for Exim
-mv mxbackup.list /etc/backupmxhosts
+mv -f mxbackup.list /etc/backupmxhosts

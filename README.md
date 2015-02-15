@@ -14,3 +14,9 @@ Prerequisites
 - Webspace with FTP Access for you to Sync your domains to with ability to run bash scripts in Cron to merge the domains from all of your servers.
 - a cPanel DNS Only Server
 - A fully licensed installation of cPanel on a VPS or Dedicated Server
+
+Steps
+- a. Create a web space for example mailcluster.mycompany.co.uk creating FTP logons for each of your servers giving them access to the root directory of the website.
+- b. You will now need to then follow the steps in the RTFM.txt located inside the Web folder to configure the webspace.
+- c. Copy the Master Scripts to your cPanel web servers in the location /root/ and then follow the instructions inside RTFM.txt.
+- e. Once the scripts are running, copy the contents of Client Scripts to your cPanel DNS Only Servers inside the /root/ directory and then follow the steps in the RTFM.txt.

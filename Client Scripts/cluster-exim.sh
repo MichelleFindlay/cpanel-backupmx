@@ -48,4 +48,4 @@ cp /root/exim.conf.edit /etc/exim.conf
 rm -f /root/exim.conf.edit
 
 # Restart exim services to apply configuration
-/etc/init.d/exim reload
+/etc/init.d/exim restart

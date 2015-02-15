@@ -1,16 +1,16 @@
-Awesome Script of Awesomeness for Redhat/CentOS Servers
+cPanel-BackupMX
 =====================
 What does this script do?
-This script gives you a shell script you can download and run with the built in menu to run commonly ran scripts relating to Parallels Plesk Servers on Redhat and CentOS. I would like to expand this in to debain and if someone would like to assist with this please contact me.
+This set of bash and automation scripts will assist you with configuring your cPanel DNS only installations to act as backup e-mail servers. It will support multiple full cPanel installs all syncing to one web space which merges and centrally manages all of the servers domains in to a single list downloaded by each of your DNS Servers.
 
 Where is the source for this script?
-https://raw.githubusercontent.com/MichaelFindlay/script-of-awesomeness/master/awesome.sh
-
 Change Log -
-https://raw.githubusercontent.com/MichaelFindlay/script-of-awesomeness/master/awesome.changelog.txt
+https://raw.githubusercontent.com/MichaelFindlay/cpanel-backupmx/master/cpanel-backupmx.changelog.txt
 
-How to run -
-wget https://raw.githubusercontent.com/MichaelFindlay/script-of-awesomeness/master/awesome.sh && sh awesome.sh && rm -f awesome.sh
+Why did you create this script?
+I had a need myself within my company utilising 5 DNS Servers world wide and cPanel web servers to be able to provide customers with a backup MX record on each of these for redundancy. I created these scripts for my own use but figured I would share them with the world to assist other cPanel sysadmins.
 
-Breakdown of what it is doing -
-Downloads the shell script > runs it > closes > removes it
+Prerequisites
+- Webspace with FTP Access for you to Sync your domains to with ability to run bash scripts in Cron to merge the domains from all of your servers.
+- a cPanel DNS Only Server
+- A fully licensed installation of cPanel on a VPS or Dedicated Server

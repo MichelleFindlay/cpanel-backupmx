@@ -1,9 +1,6 @@
-#!!# cPanel-BackupMX Custom configuration for mail cluster
-#!!# 
-#!!# You will need to put your servers WAN IP in to local_interfaces for example "local_interfaces = 94.76.102.36"
-#!!# You will need to enter your server name in to primary_hostname for example "primary_hostname = server.hostname.domain"
+#!!# cPanel Exim 4 Config
 
-local_interfaces = % IP Address %
+local_interfaces = XX.XX.XX.XX
 
 hostlist loopback = <; 127.0.0.0/8 ; 0.0.0.0 ; ::1 ; 0000:0000:0000:0000:0000:ffff:7f00:0000/8
 
@@ -151,7 +148,7 @@ split_spool_directory = yes
 smtp_connect_backlog = 50
 smtp_accept_max = 100
 
-primary_hostname = server.hostname.domain
+local_interfaces = XX.XX.XX.XX
 
 # Specify the domain you want to be added to all unqualified addresses
 # here. An unqualified address is one that does not contain an "@" character

@@ -22,7 +22,7 @@
 HOST='FTP HOST' # FTP HOST
 USER='FTP USER' # FTP USER
 PASSWD='FTP PASSWORD' # FTP Password
-DIRECT='www' # Change to public folder of your FTP web space, in this case 'www' or 'public_html' is correct on cPanel Servers
+DIRECT='servers' # Change to public folder of your FTP web space, in this case 'www' or 'public_html' is correct on cPanel Servers
 SERVER='ServerName' # Your servers canonical identifier (Must be unique and have no spaces, symbols or special characters)
 
 # DO NOT EDIT BELOW THIS LINE

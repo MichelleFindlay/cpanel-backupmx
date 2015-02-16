@@ -26,7 +26,7 @@
 
 # Sync Settings
 _IP='XX.XX.XX.XX' # Change the IP Address but leave the local_interfaces = at the start.
-_HOSTNAME='subdomain.domain.com' # Change the hostname but leave the primary_hostname = at the start.
+_HOSTNAME='subdomain.domain.com' # Change the hostname to that of your server.
 
 # DO NOT EDIT BELOW THIS LINE #
 ORGIP='local_interfaces = XX.XX.XX.XX'

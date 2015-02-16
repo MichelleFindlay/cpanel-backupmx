@@ -148,8 +148,6 @@ split_spool_directory = yes
 smtp_connect_backlog = 50
 smtp_accept_max = 100
 
-local_interfaces = XX.XX.XX.XX
-
 # Specify the domain you want to be added to all unqualified addresses
 # here. An unqualified address is one that does not contain an "@" character
 # followed by a domain. For example, "caesar@rome.ex" is a fully qualified

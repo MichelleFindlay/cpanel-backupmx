@@ -28,17 +28,17 @@ SERVER='ServerName' # Your servers canonical identifier (Must be unique and have
 # DO NOT EDIT BELOW THIS LINE
 
 # Removing old text file
-rm -f /root/$SERVER
+rm -f /root/$SERVER.server
 
 # Copy over new list of domains to the text file
-grep ": $1" /etc/userdomains | cut -d: -f1 > /root/$SERVER
+grep ": $1" /etc/userdomains | cut -d: -f1 > /root/$SERVER.server
 
 # Uploads the file to your FTP Server
 ftp -n $HOST <<END_SCRIPT
 quote USER $USER
 quote PASS $PASSWD
 cd $DIRECT
-put $SERVER
+put $SERVER.server
 quit
 END_SCRIPT
 exit 0

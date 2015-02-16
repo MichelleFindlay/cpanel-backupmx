@@ -32,18 +32,15 @@ MASTERSSL='mailcluster.yourdomain.com' # Enter the SSL hostname of the webspace
 
 # DO NOT EDIT BELOW THIS LINE #
 
-FILENAME='mxbackup' # Specifies the name of the collated file on the webspace
-FOLDER='get' # Specifies the name of the collated file on the webspace
-
 # Removes the old file
 rm -f /root/mxbackup
 
 # HTTP Fetch list of domains
-wget -N http://$MASTER/&FOLDER/$FILENAME
+wget -N --output-document backupmx http://$MASTER/get backupmx
 
 # HTTPS Fetch list of domains
 # To enable HTTPS for getting list of domains please comment out the HTTP section. And then uncomment the below line.
-#wget -N https://$MASTERSSL/$FILENAME
+#wget -N https://$MASTERSSL/get
 
 # Relocates it to the mxbackup hosts for Exim
 mv -f mxbackup /etc/backupmxhosts

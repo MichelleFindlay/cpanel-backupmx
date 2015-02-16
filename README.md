@@ -1,4 +1,4 @@
-cPanel-BackupMX
+cPanel-BackupMX (Currently in testing)
 =====================
 What does this script do?
 - This set of bash and automation scripts will assist you with configuring your cPanel DNS only installations to act as backup e-mail servers. It will support multiple full cPanel installs all syncing to one web space which merges and centrally manages all of the servers domains in to a single list downloaded by each of your DNS Servers.

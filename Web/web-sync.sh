@@ -33,4 +33,4 @@
 # c. Prior to adding to any servers or clients please allow 10 minutes for the first one to run after 5 minutes.
 
 # Merges the lists together
-cat /home/webspace/public_html/* > /home/webspace/public_html/get/mxbackup
+cat /home/webspace/public_html/* > /home/webspace/public_html/get/index.html
